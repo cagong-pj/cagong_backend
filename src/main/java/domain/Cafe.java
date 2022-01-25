@@ -29,4 +29,6 @@ public class Cafe {
     private String closetime;
     @Column(name="phoneNum",nullable = false, length = 100)
     private String phoneNum;
+    @Column(name="imageUrl",nullable = false, length = 100)
+    private String imageUrl;
 }

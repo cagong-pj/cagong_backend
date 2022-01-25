@@ -12,7 +12,7 @@ public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="imageurl",nullable = false, length = 100)
+    @Column(name="imageurl",nullable = true, length = 100)
     private String imageurl;
     @ManyToOne
     @JoinColumn(name="ReviewId")
