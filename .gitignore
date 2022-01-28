@@ -3,11 +3,15 @@ HELP.md
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
+<<<<<<< HEAD
 !**/src/test/**/build
 *.yml
 
 
 
+=======
+!**/src/test/**/build/
+>>>>>>> 7128b176070dea5b6eeb22e4e3628e729e2eaa7d
 
 ### STS ###
 .apt_generated
