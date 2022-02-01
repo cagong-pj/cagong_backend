@@ -1,9 +1,9 @@
-package winterproject.demo;
+package winterproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplicationgi
+@SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {

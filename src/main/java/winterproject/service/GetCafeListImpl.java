@@ -1,4 +1,6 @@
 package winterproject.service;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import winterproject.domain.Cafe;
 import winterproject.repository.JpaCafeRepository;
@@ -8,24 +10,16 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@Transactional
-public class GetCafeListImpl {
+@Component
+@AllArgsConstructor
+public class GetCafeListImpl implements GetCafeList {
 
 
     private final JpaCafeRepository jpaCafeRepository;
 
-    public GetCafeListImpl(JpaCafeRepository jpaCafeRepository) {
-        this.jpaCafeRepository = jpaCafeRepository;
-    }
-
-    @Transactional
-    public Optional<Cafe> getList(Long id){
-        return jpaCafeRepository.findById(id);
-    }
-
-    @Transactional
-    public List<Cafe> getAll() {
-        return jpaCafeRepository.findAll();
+    @Override
+    public List<Cafe> getCafeByLocation(String location) {
+        return jpaCafeRepository.findByLocation(location);
     }
 
 
