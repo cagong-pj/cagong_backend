@@ -36,8 +36,10 @@ public class CafeReviewController {
 
         find_ID.ifPresent(findUser_ID->{
             cafereviewrequestdto.setUser_id(findUser_ID.getUser_id());
+            CafeReview Cr = this.cafeReviewService.createComment(내용 mapper 어캐할까,findUser_ID,cafereviewrequestdto.getCafe_ID())
         });
         return new ResponseEntity<>(this.cafeReviewService.listComment(cafe_ID), HttpStatus.CREATED);
+
         //api 응답 ->entitny or body 사용
     }
 
