@@ -8,3 +8,4 @@
 //public interface CafeReviewRepository extends JpaRepository<CafeReview,Long> {
 //
 //}
+
