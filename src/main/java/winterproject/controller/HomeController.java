@@ -42,4 +42,10 @@ public class HomeController {
 //        System.out.println(location);
         return getCafeList.getCafeByLocation(location);
     }
+
+    //cafe id로 요청시 cafe정보 반환
+    @GetMapping("cafe/id/{id}")
+    public Optional<Cafe> findById(@PathVariable Long id) {
+        return jpaCafeRepository.findById(id);
+    }
 }
