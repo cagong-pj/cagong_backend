@@ -36,6 +36,18 @@ public class HomeController {
         return jpaCafeRepository.save(cafe);
     }
 
+    //cafeList 넘기는 용
+    @GetMapping("cafe/{location}")
+    public List<Cafe> getSortCafe(@PathVariable String location,
+                                  @RequestParam(value = "param1", required = true) String param1,
+                                  @RequestParam(value = "param2", required = false) String param2,
+                                  @RequestParam(value = "param3", required = false) String param3) {
+        //cafeByLocation을 갖다가 params로 재 필터링 해야함
+        List<Cafe> cafeByLocation = getCafeList.getCafeByLocation(location);
+
+        return getCafeList.getCafeByLocation(location);
+    }
+
     //location 쿼리로 get요청 되는지 test용
     @GetMapping("cafe/{location}")
     public List<Cafe> findByLocation(@PathVariable String location) {
