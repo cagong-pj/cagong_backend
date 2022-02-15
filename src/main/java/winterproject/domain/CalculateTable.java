@@ -2,6 +2,8 @@ package winterproject.domain;
 import lombok.*;
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Getter
 @Setter
@@ -21,10 +23,10 @@ public class CalculateTable {
     @Column(name="hash4",nullable = false, length = 100)
     private Integer hash4;
     @Column(name="hash5",nullable = false, length = 100)
-    private Integer hash5;
+        private Integer hash5;
     @Column(name="hash6",nullable = false, length = 100)
     private Integer hash6;
-    @ManyToOne
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name="CafeId")
     private Cafe cafe;
 }
